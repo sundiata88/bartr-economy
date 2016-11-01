@@ -5,9 +5,10 @@ var
   module.exports = {
     index,
     show,
+    create,
     update,
     destroy,
-    createListing
+
   }
 
   //index of all listings
@@ -55,11 +56,12 @@ var
     }
   })
 
-
-
-//show all listings
 //create new listings
-//post new listing to list of listings
-//edit listing
-//delete listing
-//show listing on profile
+function create(req, res){
+  Listing.create(req.body, function(err, listing){
+    if(err) console.log(err)
+    res.json({success: true, message: "new listing created"})
+  })
+}
+
+//
