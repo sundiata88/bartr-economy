@@ -9,13 +9,13 @@ module.exports = {
   createListing
 }
 
-/show all users with their interactions
+//show all users with their interactions
 
 //create a new user profile
-function createUser(req, res){
+function create(req, res){
   User.create(req.body, function(err, user){
     if(err) return console.log(err)
-    res.json({success: true, message:})
+    res.json({success: true, message:"Test"})
   })
 }
 
@@ -46,7 +46,7 @@ function destroy(req, res){
 }
 
 //create a listing through the user id:
-function createPath(req, res){
+function createListing(req, res){
   User.findById(req.params.id, function(err, user){
     if(err) console.log(err)
     //create a listing object

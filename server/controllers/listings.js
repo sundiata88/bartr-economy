@@ -8,7 +8,7 @@ var
     create,
     update,
     destroy,
-
+    
   }
 
   //index of all listings

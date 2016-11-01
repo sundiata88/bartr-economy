@@ -1,13 +1,16 @@
-var
-  mongoose = require('mongoose')
+// var
+//   Schema = mongoose.Schema;
 
-var userSchema = mongoose.Schema({
+
+var
+mongoose = require('mongoose'),
+userSchema = new mongoose.Schema({
   local: {
     name: String,
     email: String,
     password: String,
     description: String,
-    listing: [{type: mongoose.Schema.Types.ObjectID, ref: 'Listing'}]
+    //listing: [{type: mongoose.Schema.Types.ObjectID, ref: 'Listing'}]
   }
 })
 
