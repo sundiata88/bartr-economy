@@ -27,6 +27,6 @@ angular.module('bartrEconomy')
    }
 
    function createListing(id){
-     return $http.delete('api/user/listing' + id)
+     return $http.post('api/user/listing' + id)
    }
  }

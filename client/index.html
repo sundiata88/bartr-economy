@@ -1,15 +1,16 @@
 <html ng-app="bartrEconomy">
   <head>
     <meta charset="utf-8">
-
+    <base href="/">
     <title>BARTR</title>
-  </head>
-  <body>
     <script src="/js/vendor/angular.js" charset="utf-8"></script>
     <script src="/js/vendor/angular-ui-router.js" charset="utf-8"></script>
     <script src="/js/vendor/ui-bootstrap-tpls-2.2.0.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
-    <script src="/js/controllers/listingsCtrl.js" charset="utf-8"></script>
-    <script src="/js/controllers/usersCtrl.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <navigation-bar></navigation-bar>
+    <ui-view></ui-view>
   </body>
+
 </html>
