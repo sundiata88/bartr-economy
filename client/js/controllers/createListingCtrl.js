@@ -1,9 +1,9 @@
-angular.module('bartrEconomy')
+angular.module('bartrEconomy', [])
  .controller('CreateListingController', CreateListingController)
 
- CreateListingController.$inject = ['$stateParams', '$state', 'ListingFactory']
+ CreateListingController.$inject = ['$scope', '$state', 'ListingFactory']
 
- function CreateListingController($stateParams, $state, ListingFactory){
+ function CreateListingController($scope, $state, ListingFactory){
    var vm = this
 
    ListingFactory.createListing = function(){

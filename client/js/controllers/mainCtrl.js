@@ -1,4 +1,4 @@
-angular.module('bartrEconomy')
+angular.module('bartrEconomy', [])
  .controller('MainController', MainController)
 
  MainController.$inject = ['$rootScope', '$state']

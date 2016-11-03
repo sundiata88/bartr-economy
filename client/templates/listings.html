@@ -1,0 +1,30 @@
+
+<a ui-sref="lc">
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="page-header">
+        <h1>
+        Bartr away!
+        </h1>
+      </div>
+      <div class="list-group">
+        <div class="list-group-item clearfix car" ng-repeat="listings in lc.listings">
+          <div class="row">
+            <div class="col-sm-3 text-center">
+              <img ui-sref="listings({id: ._id})" ng-src="{{ listings.image }}">
+            </div>
+            <div class="col-sm-9">
+              <h3>{{ listings.title }} {{ listings.description }} <small><button ng-click="lc.destroyListing(listing, $index)" class='btn btn-sm btn'>Delete</button></small></h3>
+              <p>
+                {{ listings.description | limitTo: lc.textLimit}}
+                <span ng-if="lc.description.length > cc.textLimit">...</span>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</a>

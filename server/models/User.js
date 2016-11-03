@@ -1,19 +1,17 @@
-// var
-//   Schema = mongoose.Schema;
+// user model
+var mongoose = require('mongoose')
+var Schema = mongoose.Schema
+var passportLocalMongoose = require('passport-local-mongoose')
 
-
-var
-mongoose = require('mongoose'),
-userSchema = new mongoose.Schema({
-  local: {
-    name: String,
-    email: String,
-    password: String,
-    description: String,
-    //listing: [{type: mongoose.Schema.Types.ObjectID, ref: 'Listing'}]
-  }
+var User = new Schema({
+  username: String,
+  password: String,
+  email: String,
+  description: String,
+  //listing: [{type: mongoose.Schema.Types.ObjectID, ref: 'Listing'}]
 })
 
-var User = mongoose.model('User', userSchema)
+User.plugin(passportLocalMongoose)
 
-module.exports = User
+
+module.exports = mongoose.model('users', User)

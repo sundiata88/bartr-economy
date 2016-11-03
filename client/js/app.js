@@ -12,6 +12,20 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       templateUrl: 'templates/home.html'
     })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginController as loginCtrl'
+    })
+    .state('logout', {
+      url: '/logout',
+      controller: 'logoutController'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'templates/register.html',
+      controller: 'registerController as registerCtrl'
+    })
     .state('listings', {
       url: '/listings',
       templateUrl: 'templates/listings.html',
@@ -28,7 +42,7 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: 'CreateListingController as clc'
     })
     .state('edit', {
-      url: '/listing/edit',
+      url: '/listing/:id/edit',
       templateUrl: 'templates/edit.html',
       controller: 'EditListingController as elc'
     })
@@ -38,16 +52,6 @@ function router($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: 'RepliesListingController as rlc'
     })
     ///messaging state??????????????
-    // .state('cars', {
-    //   url: '/cars',
-    //   templateUrl: 'templates/cars.html',
-    //   controller: 'CarsController as cc'
-    // })
-    // .state('car', {
-    //   url: '/cars/:id',
-    //   templateUrl: 'templates/car.html',
-    //   controller: 'SingleCarController as scc'
-    // })
 
 }
 

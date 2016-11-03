@@ -1,12 +1,17 @@
-angular.module('bartrEconomy')
+angular.module('bartrEconomy', [])
  .controller('ListingsController', ListingsController)
 
- ListingsController.$inject = ['$stateParams', '$state', 'ListingFactory']
+ ListingsController.$inject = ['$scope', '$state', 'ListingFactory']
 
- function ListingsController(#stateParams, $state, ListingsFactory){
+ function ListingsController($scope, $state, ListingFactory){
    var vm = this
 
-   ListingFactory.show($stateParams.id)
+   ListingFactory.index()
+  .success(function(listings) {
+    vm.listings = listings
+  })
+
+    ListingFactory.show($scope.id)
     .success(function(listings){
       vm.listings = listings
     })
@@ -19,7 +24,7 @@ angular.module('bartrEconomy')
     }
 
     vm.destroyListing = function(){
-      ListingFactory.create(vm.listing)
+      ListingFactory.destroy(vm.listing)
        .success(function(data){
          $state.go('listing')
        })

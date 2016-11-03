@@ -1,12 +1,12 @@
 angular.module('bartrEconomy')
   .controller('SingleListingController', SingleListingController)
 
-  SingleListingController.$inject = ['$stateParams', '$state', 'ListingFactory']
+  SingleListingController.$inject = ['$scope', '$state', 'ListingFactory']
 
-  function SingleListingController($stateParams, $state, ListingFactory){
+  function SingleListingController($scope, $state, ListingFactory){
     var vm = this
 
-    ListingFactory.show($stateParams.id)
+    ListingFactory.show($scope.id)
      .success(function(listing){
        vm.listing = listing
      })
