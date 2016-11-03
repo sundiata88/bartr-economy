@@ -1,4 +1,4 @@
-angular.module('bartrEconomy', [])
+angular.module('bartrEconomy')
  .controller('UserController', UserController)
 
  UserController.$inject = ['$stateParams', '$state', 'UserFactory']

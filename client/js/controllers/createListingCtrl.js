@@ -1,4 +1,4 @@
-angular.module('bartrEconomy', [])
+angular.module('bartrEconomy')
  .controller('CreateListingController', CreateListingController)
 
  CreateListingController.$inject = ['$scope', '$state', 'ListingFactory']
@@ -6,7 +6,9 @@ angular.module('bartrEconomy', [])
  function CreateListingController($scope, $state, ListingFactory){
    var vm = this
 
-   ListingFactory.createListing = function(){
+   vm.createListing = function(){
+     // TODO: create line
+     $http.get('/')
      .success(function(listing){
        vm.listing = listing
      })

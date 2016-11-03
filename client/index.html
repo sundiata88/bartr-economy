@@ -1,17 +1,33 @@
+
 <html ng-app="bartrEconomy">
   <head>
     <meta charset="utf-8">
     <base href="/">
     <title>BARTR</title>
+    <link rel="stylesheet" href="/css/dist/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/dist/agency.css">
+
+
     <script src="/js/vendor/angular.js" charset="utf-8"></script>
     <script src="/js/vendor/angular-ui-router.js" charset="utf-8"></script>
     <script src="/js/vendor/ui-bootstrap-tpls-2.2.0.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
+    <script src="/js/controllers/mainCtrl.js" charset="utf-8"></script>
+    <script src="/js/controllers/createListingCtrl.js" charset="utf-8"></script>
+    <script src="/js/controllers/editListingCtrl.js" charset="utf-8"></script>
+    <script src="/js/controllers/listingsCtrl.js" charset="utf-8"></script>
+    <script src="/js/controllers/repliesListingCtrl.js" charset="utf-8"></script>
+    <script src="/js/controllers/singleListingCtrl.js" charset="utf-8"></script>
+    <script src="/js/controllers/userCtrl.js" charset="utf-8"></script>
+    <script src="/js/services/listingFactory.js" charset="utf-8"></script>
+    <script src="/js/services/userFactory.js" charset="utf-8"></script>
   </head>
-  <body>
-    <navigation-bar>navigationnnn</navigation-bar>
-    <ui-view></ui-view>
-  
+  <body ng-controller="MainController as main">
+
+    <navigation-bar></navigation-bar>
+    <ui-view>
+    </ui-view>
+
   </body>
 
 </html>

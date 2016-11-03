@@ -1,11 +1,11 @@
-angular.module('bartrEconomy', [])
+angular.module('bartrEconomy')
  .controller('MainController', MainController)
 
  MainController.$inject = ['$rootScope', '$state']
 
  function MainController($rootScope, $state){
    var vm = this
-   $rootScope.$on('$stateChangesStart', function(){
+   $rootScope.$on('$stateChangeStart', function(){
      vm.$state = $state
    })
 

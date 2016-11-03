@@ -1,4 +1,4 @@
-angular.module('bartrEconomy', [])
+angular.module('bartrEconomy')
  .controller('EditListingController', EditListingController)
 
  EditListingController.$inject = ['$stateParams', '$state', 'ListingFactory']

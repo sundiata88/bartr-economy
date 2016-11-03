@@ -1,4 +1,4 @@
-angular.module('bartrEconomy', [])
+angular.module('bartrEconomy')
  .controller('ListingsController', ListingsController)
 
  ListingsController.$inject = ['$scope', '$state', 'ListingFactory']
@@ -7,12 +7,12 @@ angular.module('bartrEconomy', [])
    var vm = this
 
    ListingFactory.index()
-  .success(function(listings) {
+    .success(function(listings) {
     vm.listings = listings
   })
 
     ListingFactory.show($scope.id)
-    .success(function(listings){
+     .success(function(listings){
       vm.listings = listings
     })
 
