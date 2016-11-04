@@ -1,5 +1,7 @@
 # bartr-economy
 
+bartrEconomy is an application that allows users to voluntarily exchanges goods and services without the inconvenience of man-made currency. 
+
 Technologies used: MEAN stack, HTML, CSS, Heroku, Github
 
 User stories:
