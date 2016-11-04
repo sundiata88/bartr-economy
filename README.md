@@ -14,8 +14,21 @@ User stories:
   - Connecting 'matches' to profiles.
   - Update and delete functioning 
   
-  
-  
-  
+ Data Models:
+ User = new Schema({
+  username: String,
+  password: String,
+  email: String,
+  description: String,
+  listing: [{type: mongoose.Schema.Types.ObjectID, ref: 'Listing'}]
+})
+
+listingSchema = new mongoose.Schema({
+    title: String,
+    description: String,
+    image: String,
+    acceptedBy: String,
+    _by: {type: mongoose.Schema.Types.ObjectID, ref: 'User'}
+  }, {timestamps: true})  
 
 
