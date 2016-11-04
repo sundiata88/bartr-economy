@@ -1,6 +1,6 @@
 # bartr-economy
 
-bartrEconomy is an application that allows users to voluntarily exchanges goods and services without the inconvenience of man-made currency. 
+bartrEconomy is an application that allows users to voluntarily exchanges goods and services without the inconvenience of man-made currency. Users create community centered around bartering and comparing old interactions to gauge impending exchanges. Bartr uses an old tool of social commerce in our modern web-based time.
 
 Technologies used: MEAN stack, HTML, CSS, Heroku, Github
 
@@ -13,6 +13,8 @@ User stories:
   - AuthService errors
   - Connecting 'matches' to profiles.
   - Update and delete functioning 
+  
+  
   
   
 
